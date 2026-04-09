@@ -1,0 +1,7 @@
+.env
+saida/
+*.csv
+*.parquet
+__pycache__/
+.idea/
+.vscode/
