@@ -2,20 +2,20 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 
 # Configure o caminho do seu jar JDBC do PostgreSQL
-path_to_jdbc_jar = "caminho\postgresql-42.2.24.jar"  # ajuste aqui
+path_to_jdbc_jar = "/content/postgresql-42.2.24.jar"  # ajuste aqui
 
 # Configure seu banco de dados
-jdbc_url = "jdbc:postgresql://db.gnufbrjwmcsxmlkhjfpp.supabase.co:5432/postgres" # ajuste aqui
+jdbc_url = "jdbc:postgresql://localhost:5432/banco"
 db_properties = { 
-    "user": "postgres",         
-    "password": "password$",       
+    "user": "colab",         
+    "password": "colab",       
     "driver": "org.postgresql.Driver", 
     "fetchsize": "10000"  
 }
 
 
 # Caminho para salvar o arquivo (ajuste aqui)
-caminho_saida = "/caminho/para/diretorio/movimento_flat"
+caminho_saida = "/content/drive/MyDrive/saida/movimento_flat"
 
 # Cria a sessão Spark
 spark = SparkSession.builder \
